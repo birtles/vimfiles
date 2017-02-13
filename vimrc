@@ -78,6 +78,8 @@ set undolevels=1000 " use many muchos levels of undo
 set wildignore=*.swp,*.tmp,*~
 
 " Use backup dir if there is one
+" (The // at the end makes it write the full path so that if you're editing
+" files with the same name in different folders they don't conflict.)
 
 set backupdir=./.backup//,~/.backup//,.
 set directory=./.backup//,~/.backup//,.
