@@ -10,13 +10,13 @@ endfunction
 
 " Set window size
 set lines=50 columns=88
+" XXX Make it go to columns=177 when splitting vertically
 
 " Initialise browse window to directory of current file
 set browsedir=buffer
 
 " Set fonts
-set guifont=MS\ Gothic:h14
-" set guifont=ƒ‚ƒgƒ„Lƒ}ƒ‹ƒxƒŠ3“™•:h14:cANSI
+set guifont=ãƒ¢ãƒˆãƒ¤Lãƒãƒ«ãƒ™ãƒª3ç­‰å¹…:h12
 " Note it's also possible to use guifontwide to set a different font just for
 " Japanese etc.
 

@@ -56,8 +56,6 @@ set hidden
 
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
-set wmh=0
-set winheight=999
 
 " Fast arg cycling
 
@@ -148,8 +146,8 @@ function! CompleteTab()
 endfunction
 inoremap <tab> <c-r>=CompleteTab()<cr>
 
-" Use PuTTY for remote editing
-let g:netrw_list_cmd = "plink HOSTNAME ls -Fa"
+" Use NerdTree in split explorer mode
+let NERDTreeHijackNetrw=1
 
 " Full-screen
 map <silent> <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
