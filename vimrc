@@ -4,7 +4,6 @@ set iminsert=0
 set imsearch=0
 
 " Standard stuff
-
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -14,7 +13,6 @@ behave mswin
 let mapleader=","
 
 " Encoding options
-
 set encoding=utf-8
 setglobal fenc=utf-8
 
@@ -42,7 +40,7 @@ set formatoptions=tcqron1
 set backspace=indent,eol,start " allow backspacing over everything
 
 set smartcase  " ignore case if search pattern is all lowercase,
-               "  case-sensitive otherwise
+               " case-sensitive otherwise
 
 " Searching
 set hlsearch   " highlight search terms
@@ -97,9 +95,6 @@ set display=lastline
 " GUI tweaks
 set title        " change the terminal's title
 
-" Highlight lines longer than 80 chars (Tip #810) -- vim 7.2 only
-" (Remove with :call matchdelete(w:m1) )
-" :au BufWinEnter *.{cpp,js,jsx,h} let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 " Highlight trailing whitespace
 :au BufWinEnter *.{cpp,js,jsx,h} let w:m2=matchadd('ErrorMsg', '\s\+$', -1)
 
@@ -126,7 +121,6 @@ syntax enable
 filetype plugin indent on
 
 " Paste mode
-
 set pastetoggle=<F2>
 
 " Following UI tweaks courtesy of
