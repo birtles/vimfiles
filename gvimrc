@@ -10,7 +10,15 @@ endfunction
 
 " Set window size
 set lines=50 columns=88
-" XXX Make it go to columns=177 when splitting vertically
+
+" Detect a new vertical split, and double the width of the window
+function! ResizeWindow()
+  if winwidth('%') == 44 && &columns == 88
+    set columns=177
+    execute "normal! \<c-w>="
+  endif
+endfunction
+autocmd WinNew * call ResizeWindow()
 
 " Initialise browse window to directory of current file
 set browsedir=buffer
