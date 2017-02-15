@@ -106,8 +106,8 @@ augroup highlightIdeographicSpace
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 
-" Tip 64 -- change working to directory to current buffer
-autocmd BufEnter * silent! lcd %:p:h
+" Change working to directory to current buffer
+set autochdir
 
 " Tip 1336 -- open explorer showing the folder of the current buffer
 " mapped to F10
