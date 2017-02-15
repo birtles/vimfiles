@@ -39,10 +39,13 @@ set textwidth=80
 set formatoptions=tcqron1
 set backspace=indent,eol,start " allow backspacing over everything
 
-set smartcase  " ignore case if search pattern is all lowercase,
-               " case-sensitive otherwise
+" Show special characters
+set list
+set listchars=tab:▸\ ,nbsp:.,trail:.
 
 " Searching
+set smartcase  " ignore case if search pattern is all lowercase,
+               " case-sensitive otherwise
 set hlsearch   " highlight search terms
 set incsearch  " show search matches as you type
 set showmatch  " ignore case when searching
@@ -147,10 +150,6 @@ let NERDTreeHijackNetrw=1
 
 " Full-screen
 map <silent> <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-
-" Show special characters
-set list
-set listchars=tab:▸\ ,nbsp:.,trail:.
 
 " Remove comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
