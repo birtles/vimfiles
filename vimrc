@@ -110,7 +110,7 @@ augroup highlightIdeographicSpace
 augroup END
 
 " Change working to directory to current buffer
-set autochdir
+autocmd BufEnter * silent! lcd %:p:h
 
 " Tip 1336 -- open explorer showing the folder of the current buffer
 " mapped to F10
@@ -125,6 +125,10 @@ filetype plugin indent on
 
 " Paste mode
 set pastetoggle=<F2>
+
+" Tag setup
+set tags=tags;
+nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust,JavaScript --fields=+iaS --c++-kinds=+p --extras=+q --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-*"<CR>
 
 " Following UI tweaks courtesy of
 " http://ehsanakhgari.org/blog/2010-03-18/c-autocomplete-feature-vim
