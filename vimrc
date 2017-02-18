@@ -1,5 +1,5 @@
 " Get rid of Japanese defaults
-lan mes en
+lan mes en_US
 set iminsert=0
 set imsearch=0
 
@@ -57,6 +57,7 @@ set hidden
 
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
+set wmh=0
 
 " Fast arg cycling
 
@@ -85,6 +86,9 @@ set wildignore=*.swp,*.tmp,*~
 set backupdir=./.backup//,~/.backup//,.
 set directory=./.backup//,~/.backup//,.
 set undodir=./.backup//,~/.backup//,.
+
+" To make file watchers happy
+set backupcopy=yes
 
 " Enable local vimrc's
 set exrc
@@ -128,7 +132,7 @@ set pastetoggle=<F2>
 
 " Tag setup
 set tags=tags;
-nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust,JavaScript --fields=+iaS --c++-kinds=+p --extras=+q --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-*"<CR>
+nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust,JavaScript --fields=+iaS --c++-kinds=+p --extras=+q --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-* --exclude=node_modules"<CR>
 
 " Following UI tweaks courtesy of
 " http://ehsanakhgari.org/blog/2010-03-18/c-autocomplete-feature-vim
