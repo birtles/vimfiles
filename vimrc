@@ -1,5 +1,5 @@
 " Get rid of Japanese defaults
-lan mes en_US
+lan mes en_US.UTF8
 set iminsert=0
 set imsearch=0
 
