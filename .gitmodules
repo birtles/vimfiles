@@ -16,3 +16,6 @@
 [submodule "pack/my-plugins/start/vim-projectroot"]
 	path = pack/my-plugins/start/vim-projectroot
 	url = https://github.com/dbakker/vim-projectroot.git
+[submodule "pack/my-plugins/start/vim-surround"]
+	path = pack/my-plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
