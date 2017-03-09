@@ -57,6 +57,8 @@ set hidden
 
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
 set wmh=0
 
 " Fast arg cycling
