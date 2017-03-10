@@ -171,10 +171,6 @@ if v:version > 703 || v:version == 703 && has("patch541")
   autocmd filetype html,xml set formatoptions-=j
 endif
 
-" Virtual navigation for wrapped lines
-nnoremap j gj
-nnoremap k gk
-
 " Clear search highlights on ,/
 nmap <silent> ,/ :nohlsearch<CR>
 
