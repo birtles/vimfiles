@@ -118,23 +118,29 @@ augroup END
 " Change working to directory to current buffer
 autocmd BufEnter * silent! lcd %:p:h
 
-" Tip 1336 -- open explorer showing the folder of the current buffer
-" mapped to F10
-nmap <F10> :!start explorer /select,%:p<CR>
-imap <F10> <Esc><F10> 
+" F2: Paste mode
+set pastetoggle=<F2>
+
+" F9: Open current buffer with the default app
+nnoremap <silent> <F9> :!start /b cmd /cstart %:p<CR><CR>
+imap <F9> <Esc>:update<CR><F9>
+
+" F10: Open explorer showing the folder of the current buffer
+nnoremap <silent> <F10> :!start explorer /select,%:p<CR><CR>
+imap <F10> <Esc><F10>
+
+" F11: Full-screen (currently broken)
+map <silent> <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+
+" F12: Generate tags
+set tags=tags;
+nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust --fields=+iaS --c++-kinds=+p --extras=+qf --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-* --exclude=node_modules"<CR>
 
 " Turn on syntax highlighting
 syn on
 syntax enable
 
 filetype plugin indent on
-
-" Paste mode
-set pastetoggle=<F2>
-
-" Tag setup
-set tags=tags;
-nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust --fields=+iaS --c++-kinds=+p --extras=+qf --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-* --exclude=node_modules"<CR>
 
 " Following UI tweaks courtesy of
 " http://ehsanakhgari.org/blog/2010-03-18/c-autocomplete-feature-vim
@@ -157,9 +163,6 @@ inoremap <tab> <c-r>=CompleteTab()<cr>
 
 " Use NerdTree in split explorer mode
 let NERDTreeHijackNetrw=1
-
-" Full-screen
-map <silent> <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 
 " Remove comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
