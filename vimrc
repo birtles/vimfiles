@@ -61,6 +61,14 @@ nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
 set wmh=0
 
+" Window splitting
+
+" :Vsp - Do a vertical split but make it so the vertical axis is the primary
+" one and so that the file opened appears on the right
+" :Vsta - likewise but use the given tag
+command -nargs=* Vsp bo vert split <args>
+command -nargs=* Vsta bo vert sta <args>
+
 " Fast arg cycling
 
 nmap <C-N> :update<CR>:n<CR>
