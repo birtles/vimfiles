@@ -24,7 +24,7 @@ autocmd WinNew * call ResizeWindow()
 set browsedir=buffer
 
 " Set fonts
-set guifont=モトヤLマルベリ3等幅:h12,MS\ Gothic:h16
+set guifont=モトヤLマルベリ3等幅:h12,Consolas:h14,MS\ Gothic:h16
 " Note it's also possible to use guifontwide to set a different font just for
 " Japanese etc.
 

@@ -66,8 +66,8 @@ set wmh=0
 " :Vsp - Do a vertical split but make it so the vertical axis is the primary
 " one and so that the file opened appears on the right
 " :Vsta - likewise but use the given tag
-command -nargs=* Vsp bo vert split <args>
-command -nargs=* Vsta bo vert sta <args>
+command -complete=file -nargs=1 Vsp bo vert split <args>
+command -complete=tag -nargs=1 Vsta bo vert sta <args>
 
 " Fast arg cycling
 
