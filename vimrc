@@ -64,7 +64,7 @@ set wmh=0
 " Window splitting
 
 " :Vsp - Do a vertical split but make it so the vertical axis is the primary
-" one and so that the file opened appears on the right
+"        one and so that the file opened appears on the right
 " :Vsta - likewise but use the given tag
 command -complete=file -nargs=1 Vsp bo vert split <args>
 command -complete=tag -nargs=1 Vsta bo vert sta <args>
@@ -184,3 +184,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 " Rust options
 autocmd Filetype rust setlocal ts=4 sw=4 tw=100
+
+" Turn off syntastic for C++ (it uses clang which seems to struggle with the
+" mozilla/* include files)
+let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
