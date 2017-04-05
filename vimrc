@@ -156,25 +156,6 @@ syntax enable
 
 filetype plugin indent on
 
-" Following UI tweaks courtesy of
-" http://ehsanakhgari.org/blog/2010-03-18/c-autocomplete-feature-vim
-
-" auto close options when exiting insert mode or moving away
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-set completeopt=menu,menuone
-
-" Setup the tab key to do autocompletion
-function! CompleteTab()
-  let prec = strpart( getline('.'), 0, col('.')-1 )
-  if prec =~ '^\s*$' || prec =~ '\s$'
-    return "\<tab>"
-  else
-    return "\<c-x>\<c-o>"
-  endif
-endfunction
-inoremap <tab> <c-r>=CompleteTab()<cr>
-
 " Remove comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j
