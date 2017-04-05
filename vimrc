@@ -169,9 +169,6 @@ function! CompleteTab()
 endfunction
 inoremap <tab> <c-r>=CompleteTab()<cr>
 
-" Use NerdTree in split explorer mode
-let NERDTreeHijackNetrw=1
-
 " Remove comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j
