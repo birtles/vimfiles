@@ -126,6 +126,12 @@ augroup END
 " Change working to directory to current buffer
 autocmd BufEnter * silent! lcd %:p:h
 
+" netrw tweaks
+let g:netrw_banner       = 0 " No banner
+let g:netrw_keepdir      = 0 " Update current working directory to match
+                             "browsing direction
+let g:netrw_sort_options = 'i' " Case-insensitive sort
+
 " F2: Paste mode
 set pastetoggle=<F2>
 
