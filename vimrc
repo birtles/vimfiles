@@ -66,7 +66,7 @@ set wmh=0
 " :Vsp - Do a vertical split but make it so the vertical axis is the primary
 "        one and so that the file opened appears on the right
 " :Vsta - likewise but use the given tag
-command -complete=file -nargs=1 Vsp bo vert split <args>
+command -complete=file -nargs=? Vsp bo vert split <args>
 command -complete=tag -nargs=1 Vsta bo vert sta <args>
 
 " Fast arg cycling
@@ -102,6 +102,7 @@ set backupcopy=yes
 
 " Enable local vimrc's
 set exrc
+set secure
 
 " Don't prompt to reload changed files
 set autoread
