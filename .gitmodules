@@ -13,3 +13,6 @@
 [submodule "pack/my-plugins/start/vim-surround"]
 	path = pack/my-plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/my-plugins/start/vim-prettier"]
+	path = pack/my-plugins/start/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git

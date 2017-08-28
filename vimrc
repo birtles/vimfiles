@@ -36,7 +36,7 @@ set cino=(1s   " C-indent options: Don't double-indent bracketed lines
 
 set wrapmargin=0
 set textwidth=80
-set formatoptions=tcqron1
+set formatoptions=tcqron1B
 set backspace=indent,eol,start " allow backspacing over everything
 
 " Show special characters
@@ -160,8 +160,6 @@ filetype plugin indent on
 " Remove comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j
-  " But not for HTML
-  autocmd filetype html,xml set formatoptions-=j
 endif
 
 " Clear search highlights on ,/
@@ -173,3 +171,8 @@ autocmd Filetype rust setlocal ts=4 sw=4 tw=100
 " Turn off syntastic for C++ (it uses clang which seems to struggle with the
 " mozilla/* include files)
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
+
+" Prettier config
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'es5'
