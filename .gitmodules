@@ -16,3 +16,6 @@
 [submodule "pack/my-plugins/start/vim-prettier"]
 	path = pack/my-plugins/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "pack/my-plugins/start/typescript-vim"]
+	path = pack/my-plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
