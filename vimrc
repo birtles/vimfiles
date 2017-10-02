@@ -173,7 +173,6 @@ autocmd Filetype rust setlocal ts=4 sw=4 tw=100
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
 
 " Prettier config
-let g:prettier#exec_cmd_async = 1
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
