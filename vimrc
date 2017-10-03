@@ -61,6 +61,11 @@ nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
 set wmh=0
 
+" Tab moving
+
+noremap <Leader><Left>  :tabmove -1<CR>
+noremap <Leader><Right> :tabmove +1<CR>
+
 " Window splitting
 
 " :Vsp - Do a vertical split but make it so the vertical axis is the primary
