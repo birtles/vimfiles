@@ -181,3 +181,4 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'true'
