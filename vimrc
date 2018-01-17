@@ -149,9 +149,6 @@ imap <F9> <Esc>:update<CR><F9>
 nnoremap <silent> <F10> :!start explorer /select,%:p<CR><CR>
 imap <F10> <Esc><F10>
 
-" F11: Full-screen (currently broken)
-map <silent> <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-
 " F12: Generate tags
 set tags=tags;
 nmap <F12> :execute "AsyncRun -cwd=" . ProjectRootGuess() "ctags --recurse --languages=C++,Rust --fields=+iaS --c++-kinds=+p --extras=+qf --langmap=C++:.c.h.cpp.idl.webidl --exclude=obj-* --exclude=node_modules"<CR>
