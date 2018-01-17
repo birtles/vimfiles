@@ -23,6 +23,16 @@ autocmd WinNew * call ResizeWindow()
 " Initialise browse window to directory of current file
 set browsedir=buffer
 
+" Turn off scrollbars and tab button bar since they seem to cause window
+" resizing issues on Ubuntu
+set guioptions-=L
+set guioptions-=l
+set guioptions-=R
+set guioptions-=r
+set guioptions-=b
+set guioptions-=h
+set guioptions-=e
+
 " Set fonts
 if has("gui_win32")
   set guifont=モトヤLマルベリ3等幅:h12,Consolas:h14,MS\ Gothic:h16
