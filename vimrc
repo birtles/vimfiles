@@ -173,6 +173,10 @@ nmap <silent> ,/ :nohlsearch<CR>
 " Rust options
 autocmd Filetype rust setlocal ts=4 sw=4 tw=100
 
+" Use ripgrep for grepping
+set grepprg=rg\ --vimgrep
+set grepformat^=%f:%l:%c:%m
+
 " Turn off syntastic for C++ (it uses clang which seems to struggle with the
 " mozilla/* include files)
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
