@@ -8,7 +8,7 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-unmap <C-F>
+silent! unmap <C-F>
 
 " Change the mapleader from \ to ,
 let mapleader=","
