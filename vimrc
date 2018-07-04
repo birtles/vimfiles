@@ -64,6 +64,21 @@ set wmh=0
 noremap <Leader><Left>  :tabmove -1<CR>
 noremap <Leader><Right> :tabmove +1<CR>
 
+" Tab shortcuts
+" Thanks to Xidorn!
+
+nmap <silent> <M-t> :tabnew<CR>
+nmap <M-1> 1gt
+nmap <M-2> 2gt
+nmap <M-3> 3gt
+nmap <M-4> 4gt
+nmap <M-5> 5gt
+nmap <M-6> 6gt
+nmap <M-7> 7gt
+nmap <M-8> 8gt
+nmap <M-9> 9gt
+nmap <silent> <M-0> :tablast<CR>
+
 " Window splitting
 
 " :Vsp - Do a vertical split but make it so the vertical axis is the primary
