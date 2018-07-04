@@ -51,9 +51,6 @@ set hlsearch   " highlight search terms
 set incsearch  " show search matches as you type
 set showmatch  " ignore case when searching
 
-" Hide buffers instead of closing them
-set hidden
-
 " Fast window switching
 
 nmap <C-J> <C-W>j<C-W>_
