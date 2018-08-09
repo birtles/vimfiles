@@ -196,3 +196,8 @@ let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'true'
+
+" clang-format config
+let g:clang_format_path = $HOME . '/.mozbuild/clang-tools/clang/bin/clang-format'
+let VIMHOME = fnamemodify(expand("$MYVIMRC"), ":p:h")
+command -range=% ClangFmt execute 'py3f ' . VIMHOME . '/plugin/clang-format.py'
