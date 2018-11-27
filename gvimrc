@@ -51,3 +51,7 @@ endif
 " Set Solarize theme
 set background=light
 colorscheme summerfruit256
+
+" Balloons in TS
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()

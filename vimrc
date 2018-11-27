@@ -191,6 +191,10 @@ set grepformat^=%f:%l:%c:%m
 " mozilla/* include files)
 let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
 
+" Configure syntastic for tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " i.e. not tsc
+
 " Prettier config
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'es5'
