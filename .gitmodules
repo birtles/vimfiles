@@ -22,3 +22,6 @@
 [submodule "pack/my-plugins/start/vim-fugitive"]
 	path = pack/my-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/my-plugins/start/tsuquyomi"]
+	path = pack/my-plugins/start/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
